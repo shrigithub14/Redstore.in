@@ -1,0 +1,85 @@
+body {
+    background-color: #f6f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: rgb(6, 121, 138);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 2px solid rgb(6, 121, 138);
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: rgb(16, 132, 10);
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    margin: 15px 0;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: rgb(129, 247, 145);
+    color: #27130b;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #057c8e;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shristore|payment Form</title>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px" alt="logo"></a>
+            </div>
+            <nav>  
+                <ul id="Menuitems">
+                
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="payment.html">payment</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"> <img src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="cart" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+    </div>
+    
+    <h1 style="color: rgb(6, 121, 138);" >PAYMENT FORM</h1>
+    <hr>
+    <form action="">
+        
+        <p>
+            <h3>NOTE : Fields with * are required.</h3>
+        </p>
+        <fieldset>
+        <legend>
+            <h3>Personal info</h3>
+        </legend>
+        
+        <p>*NAME : <input type="text" name="name" required></p>
+        <p>
+            *Gender : MALE <input type="radio" name="gender" id="gender" required>
+            FEMALE <input type="radio" name="gender" id="gender" required>
+        </p>
+        <p>
+            ADDRESS : <textarea name="address" id="address" cols="100" rows="2"></textarea>
+        </p>
+        <p>
+            *PINCODE : <input type="number" name="pincode" id="pincode" required>
+        </p>
+        <p>
+            *MAIL : <input type="email" name="email" id="email" required>
+        </p>
+        
+        </fieldset>
+
+        <br>
+        <br>
+
+        <fieldset>
+            <legend><h3>Payment Info</h3></legend>
+            <p>
+                *Card Type :
+                <select name="card" id="card" required>
+                    <option value="">--Select a card--</option>
+                    <option value="RUPAY">RUPAY</option>
+                    <option value="VISA">VISA</option>
+                    <option value="MASTERCARD">MASTERCARD</option>
+                </select>
+            </p>
+            <p>
+                *Card Number : <input type="number" name="card_no" id="card_no" required>
+            </p>
+            <p>
+                *Exp Date : <input type="date" name="exp_date" id="exp_date" required>
+            </p>
+            <p>
+                *CVV : <input type="password" name="cvv" id="cvv" required>
+            </p>
+            <input type="submit" onbclick="alert(hii)" value="PAY NOW">
+        </fieldset>
+    </form>
+</body>
+</html>

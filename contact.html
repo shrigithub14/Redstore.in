@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shristore.in| Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#response {
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px" alt="logo"></a>
+        </div>
+        <nav>  
+            <ul id="Menuitems">
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="payment.html">payment</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"> <img src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+        <img src="images/menu.png" alt="cart" class="menu-icon" onclick="menutoggle()">
+    </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="response"></div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contact-form");
+    const responseDiv = document.getElementById("response");
+
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // You can add your logic here to handle the form submission, e.g., using AJAX.
+
+        // For this example, we'll just display a success message.
+        responseDiv.innerText = "Message sent successfully!";
+        contactForm.reset();
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shristore.in| about us</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="index.html"></script>
+
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px" alt="logo"></a>
+        </div>
+        <nav>  
+            <ul id="Menuitems">
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="payment.html">payment</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"> <img src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+        <img src="images/menu.png" alt="cart" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+<!-------------------cart-itemdetails------------->
+ <div class="small-container cart-page">
+    <table>
+        <thead>
+            <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-1.jpg" alt="buy1">
+                        <div>
+                            <p> Red Printed Tshirt</p>
+                            <small>price:&#8377;500</small>
+                            <br>
+                            <a href="">remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" ></td>
+                
+                <td>&#8377;500</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-2.jpg" alt="buy2">
+                        <div>
+                            <p>Black shoes</p>
+                            <small>price:&#8377;2000</small>
+                            <br>
+                            <a href="">remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>&#8377;2000</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-3.jpg" alt="buy3">
+                        <div>
+                            <p>Sports pant</p>
+                            <small>price:&#8377;700</small>
+                            <br>
+                            <a href="">remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>&#8377;700</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>&#8377;3200</td>
+            </tr>
+            <tr>
+                <td>GST</td>
+                <td>&#8377;320.23</td>
+            </tr>
+            <tr>
+                <td>Net Toatl</td>
+                <td>&#8377;3520.23</td>
+            </tr>
+        </table>
+    </div>
+ </div>
+
+
+
+  <!---$$$$$$$$$$$$$$$$$$--footer ------------------------->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download app for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="playstore">
+                    <img src="images/app-store.png" alt="app">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" alt="white logo">
+                <p>Our purpose Is to Sustainably make the Pleasur and Benefits of Sports Accessible to the many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Jion Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us On</h3>
+                <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>You Tube</li>   
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright &#169;2020 -@_shrikant.jadhao</p>
+    </div>
+  </div>
+  <!---------@@@@@@@@@@@@@@@----------->
+  <script>
+    var Menuitems = document.getElementById("Menuitems");
+    
+    Menuitems.style.maxHeight="0px";
+    
+    function menutoggle()
+    {
+        if(Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px";
+        }
+        else{
+            Menuitems.style.maxHeight="0px";
+        }
+    }
+    </script>
+    <script>
+    // Function to update the subtotal price when quantity changes
+    function updateSubtotal(row) {
+        const quantityInput = row.querySelector('input[type="number"]');
+        const price = row.querySelector('small').textContent.replace('price:', '').replace('₹', '').trim();
+        const subtotal = row.querySelector('td:nth-child(3)');
+        const newQuantity = parseInt(quantityInput.value);
+        const newSubtotal = newQuantity * parseFloat(price);
+        subtotal.textContent = '₹' + newSubtotal.toFixed(2);
+    }
+
+    // Attach event listeners to input fields
+    const quantityInputs = document.querySelectorAll('input[type="number"]');
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const row = this.closest('tr');
+            updateSubtotal(row);
+        });
+    });
+
+    // Initial calculation
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+        updateSubtotal(row);
+    });
+</script>
+<!-- Add this script at the end of your HTML body -->
+<script>
+    // Function to update the subtotal price when quantity changes
+    function updateSubtotal(row) {
+        const quantityInput = row.querySelector('input[type="number"]');
+        const price = row.querySelector('small').textContent.replace('price:', '').replace('₹', '').trim();
+        const subtotal = row.querySelector('td:nth-child(3)');
+        const newQuantity = parseInt(quantityInput.value);
+        const newSubtotal = newQuantity * parseFloat(price);
+        subtotal.textContent = '₹' + newSubtotal.toFixed(2);
+
+        // Recalculate the total
+        calculateTotal();
+    }
+
+    // Function to calculate the total, GST, and net total
+    function calculateTotal() {
+        const rows = document.querySelectorAll('tbody tr');
+        let total = 0;
+
+        rows.forEach(row => {
+            const subtotal = parseFloat(row.querySelector('td:nth-child(3)').textContent.replace('₹', ''));
+            total += subtotal;
+        });
+
+        // Calculate GST and Net Total
+        const gst = total * 0.18;
+        const netTotal = total + gst;
+
+        // Update the total prices in the second table
+        const subtotalElement = document.querySelector('.total-price table tr:nth-child(1) td:last-child');
+        const gstElement = document.querySelector('.total-price table tr:nth-child(2) td:last-child');
+        const netTotalElement = document.querySelector('.total-price table tr:nth-child(3) td:last-child');
+
+        subtotalElement.textContent = '₹' + total.toFixed(2);
+        gstElement.textContent = '₹' + gst.toFixed(2);
+        netTotalElement.textContent = '₹' + netTotal.toFixed(2);
+    }
+
+    // Attach event listeners to input fields
+    const quantityInputs = document.querySelectorAll('input[type="number"]');
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const row = this.closest('tr');
+            updateSubtotal(row);
+        });
+    });
+
+    // Initial calculation
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+        updateSubtotal(row);
+    });
+</script>
+
+   
+  
+</body>
+</html>  

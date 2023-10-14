@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shristore.in| Account</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="index.html"></script>
+
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px" alt="logo"></a>
+        </div>
+        <nav>  
+            <ul id="Menuitems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="payment.html">payment</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"> <img src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+        <img src="images/menu.png" alt="cart" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+<!-----account-page------->
+<div class="acc-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" alt="loginimg" width:100%;>
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                       <span onclick="login()">Login</span>
+                       <hr id="indicator">
+                       <span onclick="register()">Register</span>
+                       
+                    </div>
+                    <form id="loginform">
+                        <input type="number" placeholder="username " required>
+                        <input type="password" placeholder="password" required>
+                        <button type="submit" class="btn" >Login</button>
+                        <a href="">forgot password</a>
+                    </form>
+
+                    <form id="rgform">
+                        <input type="text" placeholder="username " required>
+                        <input type="email" placeholder="email " required>
+                        <input type="password" placeholder="password" required>
+                        <button type="submit" class="btn">Register</button>
+                      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+  <!---$$$$$$$$$$$$$$$$$$--footer ------------------------->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download app for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="playstore">
+                    <img src="images/app-store.png" alt="app">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" alt="white logo">
+                <p>Our purpose Is to Sustainably make the Pleasur and Benefits of Sports Accessible to the many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Jion Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us On</h3>
+                <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>You Tube</li>   
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright &#169;2020 -@_shrikant.jadhao</p>
+    </div>
+  </div>
+  <!---------@@@@@@@@@@@@@@@----------->
+  <script>
+    var Menuitems = document.getElementById("Menuitems");
+    
+    Menuitems.style.maxHeight="0px";
+    
+    function menutoggle()
+    {
+        if(Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px";
+        }
+        else{
+            Menuitems.style.maxHeight="0px";
+        }
+    }
+    </script>
+    <script>
+        var loginform =document.getElementById("loginform");
+        var rgform=document.getElementById("rgform");
+        var indicator=document.getElementById("indicator");
+        function register()
+        {
+            rgform.style.transform="translateX(0px)";
+            loginform.style.transform="translateX(0px)";
+            indicator.style.transform="translateY(5px)";
+        }
+ 
+        function login()
+        {
+            loginform.style.transform="translateX(300px)";
+            rgform.style.transform="translateX(300px)";
+            indicator.style.transform="translateY(-40px)";
+            
+        }
+        
+    </script>
+   
+
+   
+  
+</body>
+</html>  
